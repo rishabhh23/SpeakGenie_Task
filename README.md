@@ -36,8 +36,8 @@ Translation: Google Translate API (or similar)
 --- Getting Started ---
 
 1. Clone & Install
-   git clone https://github.com/your-username/genie-voice-tutor.git
-   cd genie-voice-tutor
+   git clone https://github.com/rishabhh23/SpeakGenie_Task
+   cd speakgenie
    npm install
 
 2. Environment Variables
@@ -45,7 +45,6 @@ Translation: Google Translate API (or similar)
 Create a .env.local file:
 
 OPENAI_API_KEY=your_openai_key
-GOOGLE_API_KEY=your_google_key # if using Google STT/TTS/Translate
 ELEVENLABS_API_KEY=your_elevenlabs_key # if using ElevenLabs TTS
 
 3. Run Dev Server
