@@ -1,0 +1,6 @@
+Copyright (c) 2025 Rishabh Sharma
+
+Evaluation License: The code is provided solely for non-commercial evaluation by SmartGenie
+and its recruiters for the purpose of assessing my candidacy. No right to use, modify, copy,
+sublicense, or distribute is granted beyond this evaluation. Any usage in production or for
+derivative works requires a separate, written agreement with the copyright owner.

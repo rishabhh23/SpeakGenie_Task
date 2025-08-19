@@ -60,3 +60,7 @@ Tutor Mode: Free Q&A with AI Genie
 Roleplay Mode: Practice scenarios (School, Store, Home)
 
 Native Language: Bot replies also appear in Hindi/Marathi/etc.
+
+License & Use
+This project is shared for evaluation only under the terms in LICENSE.txt.
+© 2025 Rishabh Sharma. All rights reserved.

@@ -31,19 +31,18 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        temperature: 0.0,
+        temperature: 0,
         messages: [
           {
             role: "system",
-            content: `You are a translation engine.
-- Output ONLY the translation text, no quotes, no brackets, no explanations.
-- Translate into the specified target language and script precisely.
-- Do NOT transliterate. Use the native script of the target language.`,
+            content:
+              "You are a translation engine.\n- Output ONLY the translation text, no quotes or brackets.\n- Translate into the specified target language and script precisely.\n- Do NOT transliterate. Use the native script.",
           },
           {
             role: "user",
-            content: `Target language: ${targetName(targetLang)}
-Text: ${text}`,
+            content: `Target language: ${targetName(
+              targetLang
+            )}\nText: ${text}`,
           },
         ],
       }),
@@ -60,8 +59,7 @@ Text: ${text}`,
     const data = await r.json();
     let out: string = data.choices?.[0]?.message?.content?.trim() ?? text;
 
-    const isDevanagari = /[\u0900-\u097F]/.test(out);
-    if (targetLang === "hi" && !isDevanagari) {
+    if (targetLang === "hi" && !/[\u0900-\u097F]/.test(out)) {
       const r2 = await fetch(`${OPENAI_API}/chat/completions`, {
         method: "POST",
         headers: {
@@ -70,7 +68,7 @@ Text: ${text}`,
         },
         body: JSON.stringify({
           model: "gpt-4o-mini",
-          temperature: 0.0,
+          temperature: 0,
           messages: [
             {
               role: "system",
